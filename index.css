@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  color: var(--col-095);
+  background-color: var(--col-005);
+  font-family: Helvetica Now Display, Helvetica Neue, Helvetica, Sans-serif;
+  font-size: 20px;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision !important;
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+p {
+  margin: 1rem 0em 1rem 0em;
+}
+
+h1 {
+  margin: 1rem 0em 1rem 0em;
+  font-size: 6em;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}

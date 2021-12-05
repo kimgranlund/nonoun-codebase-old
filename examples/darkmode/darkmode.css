@@ -1,0 +1,98 @@
+:root {
+  --tint-000: hsla(0, 000%, 100%, 1);
+  --tint-005: hsla(0, 000%, 095%, 1);
+  --tint-020: hsla(0, 000%, 080%, 1);
+  --tint-040: hsla(0, 000%, 060%, 1);
+  --tint-060: hsla(0, 000%, 040%, 1);
+  --tint-080: hsla(0, 000%, 020%, 1);
+  --tint-095: hsla(0, 000%, 005%, 1);
+  --tint-100: hsla(0, 000%, 000%, 1);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --col-000: var(--tint-000);
+    --col-005: var(--tint-005);
+    --col-020: var(--tint-020);
+    --col-040: var(--tint-040);
+    --col-060: var(--tint-060);
+    --col-080: var(--tint-080);
+    --col-095: var(--tint-095);
+    --col-100: var(--tint-100);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --col-000: var(--tint-100);
+    --col-005: var(--tint-095);
+    --col-020: var(--tint-080);
+    --col-040: var(--tint-060);
+    --col-060: var(--tint-040);
+    --col-080: var(--tint-020);
+    --col-095: var(--tint-005);
+    --col-100: var(--tint-000);
+  }
+}
+
+body {
+  margin: 0;
+  color: var(--col-095);
+  background-color: var(--col-005);
+  font-family: Helvetica Now Display, Helvetica Neue, Helvetica, Sans-serif;
+  font-size: 20px;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision !important;
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+button {
+  font-size: 1em;
+  color: var(--col-095);
+  background-color: var(--col-000);
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  box-sizing: border-box;
+  margin: 0em;
+  padding: 0.5em 2.5em;
+  border-radius: 1000em;
+  border-width: 0.125em;
+  border-style: none;
+  border-color: var(--col-100);
+  border-image: initial;
+}
+
+button:hover {
+  color: var(--col-005);
+  background-color: var(--col-095);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+p {
+  margin: 1rem 0em 1rem 0em;
+}
+
+h1 {
+  margin: 1rem 0em 1rem 0em;
+  font-size: 6em;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}

@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: Helvetica Now Display, Helvetica Neue, Helvetica, Sans-serif;
+  font-size: 20px;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision !important;
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+
+  width: 100vw;
+  height: 100vh;
+  transition: "background-image" 3s;
+}

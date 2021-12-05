@@ -1,0 +1,30 @@
+{
+  "name": "nonoun-codebase",
+  "version": "1.0.38",
+  "description": "",
+  "main": "./index.html",
+  "exports": "./src/exports.js",
+  "typings": "./index.js",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kimgranlund/nn-codebase.git"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.6.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.13.8"
+  },
+  "author": "Kim Granlund",
+  "license": "ISC",
+  "keywords": [],
+  "homepage": "https://github.com/kimgranlund/nn-codebase#readme"
+}

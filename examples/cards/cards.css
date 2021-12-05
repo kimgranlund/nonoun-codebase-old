@@ -1,0 +1,191 @@
+body {
+  font-family: sans-serif;
+  color: grey;
+  margin: 0;
+  background-color: whitesmoke;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.slider-component {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-columns: auto;
+  grid-auto-rows: auto;
+  grid-column-gap: 0em;
+  grid-row-gap: 0em;
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
+  -ms-grid-rows: 100%;
+  grid-template-rows: 1fr auto;
+  align-items: stretch;
+  /**/
+  height: 30em;
+}
+
+.slider-component-element {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-columns: auto;
+  grid-auto-rows: auto;
+  grid-column-gap: 0em;
+  grid-row-gap: 0em;
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
+  -ms-grid-rows: 100%;
+  grid-template-rows: 1fr auto;
+  align-items: stretch;
+
+  overflow-x: hidden;
+  position: relative;
+}
+
+.slider-component-element--slides-container {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 1;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 1;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.slider-component-element--controls-container {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 1;
+  -ms-grid-row: 2;
+  grid-row-start: 2;
+  -ms-grid-row-span: 1;
+  grid-row-end: 2;
+}
+
+.slider-component-element--pagination-container {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 1;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 1;
+}
+
+.slides-container {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  grid-column-gap: 0em;
+  grid-row-gap: 0em;
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
+  -ms-grid-rows: 100%;
+  grid-template-rows: 100%;
+  align-items: stretch;
+  transition: transform 0.5s;
+  /**/
+  /**/
+}
+
+.slide-container {
+  display: -ms-grid;
+  display: grid;
+  align-items: stretch;
+  justify-items: stretch;
+  /**/
+  width: 20em;
+}
+
+.slide-container .slide {
+  /**/
+  margin: 2em;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: white;
+  transition: margin 0.5s, padding 0.5s, box-shadow 0.5s, background-color 0.5s;
+}
+
+.slide-container.current .slide {
+  /**/
+  margin: 1em;
+  padding: 2em;
+  box-shadow: 0.0625em 0.0625em 2em 0.33em rgb(77 83 90 / 12%),
+    0.0625em 0.0625em 0.5em 0.125em rgb(77 83 90 / 12%);
+}
+
+.controls-container {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  grid-column-gap: 0.5em;
+  grid-row-gap: 0em;
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
+  -ms-grid-rows: 100%;
+  grid-template-rows: 100%;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  transition: transform 0.5s;
+  /**/
+  /**/
+}
+
+.control-button {
+  width: 0.66em;
+  height: 0.66em;
+  background-color: lightgrey;
+  clip-path: circle(0.333em at 0.333em);
+  transition: background-color 0.5s;
+}
+
+.control-button:hover,
+.control-button.current {
+  background-color: grey;
+}
+
+.pagination-container {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  grid-column-gap: 0em;
+  grid-row-gap: 0em;
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
+  -ms-grid-rows: 100%;
+  grid-template-rows: 100%;
+  justify-content: space-between;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+}
+
+.pagination-button {
+  width: 3em;
+  height: 3em;
+  margin: 1em;
+  background-color: lightgrey;
+  clip-path: circle(1.5em at 1.5em);
+  transition: background-color 0.5s, opacity 0.5s;
+  z-index: 1;
+}
+
+.pagination-button.current {
+  opacity: 0;
+}
+
+.pagination-button:hover {
+  background-color: grey;
+}
